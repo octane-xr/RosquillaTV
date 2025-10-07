@@ -1,7 +1,6 @@
 # Random Simpsons Player
 
 > Extensión para Chrome y Firefox que reproduce un episodio **aleatorio de *Los Simpson*** directamente desde [Disney+](https://www.disneyplus.com).  
-> Ideal para los que no pueden decidir qué capítulo ver
 
 ---
 
