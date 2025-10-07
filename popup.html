@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simpsons Random</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🎲 Simpsons Aleatorio</h1>
+
+  <div>
+    <label><input type="radio" name="mode" value="all" checked> Todas las temporadas</label><br>
+    <label><input type="radio" name="mode" value="single"> Una sola temporada</label>
+    <input type="number" id="singleSeason" min="1" placeholder="Ej: 10"><br>
+    <label><input type="radio" name="mode" value="range"> Rango de temporadas</label>
+    <input type="number" id="fromSeason" min="1" placeholder="De"> -
+    <input type="number" id="toSeason" min="1" placeholder="A"><br>
+    <label><input type="radio" name="mode" value="multiple"> Selección de temporadas</label>
+    <input type="text" id="multipleSeasons" placeholder="Ej: 1,4,6,10">
+  </div>
+
+  <button id="playRandom">▶ Reproducir aleatorio</button>
+
+  <p id="status"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
