@@ -1,5 +1,5 @@
 (async function () {
-    const SIMPSONS_ID = "entity-cac75c8f-a9e2-4d95-ac73-1cf1cc7b9568";
+    const SHOW_ID = "entity-cac75c8f-a9e2-4d95-ac73-1cf1cc7b9568";
   
     async function getEpisodes() {
       return new Promise((resolve, reject) => {
@@ -15,20 +15,20 @@
     }
   
     async function injectBanner() {
-      if (document.querySelector("#simpsons-random-banner")) return;
+      if (document.querySelector("#show-random-banner")) return;
 
   
       let temporadas;
       try {
         temporadas = await getEpisodes();
       } catch (e) {
-        console.error("❌ No se pudo cargar el JSON:", e);
+        console.error("No se pudo cargar el JSON:", e);
         return;
       }
   
       // Banner principal
       const banner = document.createElement("div");
-      banner.id = "simpsons-random-banner";
+      banner.id = "show-random-banner";
       banner.textContent = "🎲 Episodio aleatorio";
       Object.assign(banner.style, {
         position: "fixed",
@@ -61,7 +61,7 @@
   
       // Panel oculto
       const panel = document.createElement("div");
-      panel.id = "simpsons-random-panel";
+      panel.id = "show-random-panel";
       Object.assign(panel.style, {
         display: "none",
         position: "fixed",
@@ -144,17 +144,17 @@
     const observer = new MutationObserver(() => {
       if (location.href !== lastURL) {
         lastURL = location.href;
-        if (location.href.includes(SIMPSONS_ID)) {
+        if (location.href.includes(SHOW_ID)) {
           injectBanner();
         } else {
-          document.querySelector("#simpsons-random-banner")?.remove();
-          document.querySelector("#simpsons-random-panel")?.remove();
+          document.querySelector("#show-random-banner")?.remove();
+          document.querySelector("#show-random-panel")?.remove();
         }
       }
     });
     observer.observe(document, { subtree: true, childList: true });
   
-    if (location.href.includes(SIMPSONS_ID)) {
+    if (location.href.includes(SHOW_ID)) {
       injectBanner();
     }
   })();

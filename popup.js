@@ -1,5 +1,5 @@
 async function loadEpisodes() {
-    const response = await fetch(chrome.runtime.getURL("simpsons_todas_temporadas.json"));
+    const response = await fetch(chrome.runtime.getURL("all_seasons.json"));
     const data = await response.json();
     return data.temporadas;
   }

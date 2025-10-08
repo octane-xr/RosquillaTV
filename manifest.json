@@ -1,31 +1,26 @@
 {
-    "manifest_version": 3,
-    "name": "Random Simpsons Player",
-    "version": "1.0",
-    "description": "Reproduce un episodio aleatorio de Los Simpson en Disney+.",
-    "permissions": ["tabs"],
-    "host_permissions": ["https://www.disneyplus.com/*"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon":{
-        "16": "icons/icon16.png"
-      }
-    },
-    "content_scripts": [
-      {
-        "matches": ["https://www.disneyplus.com/*"],
-        "js": ["banner.js"],
-        "run_at": "document_idle"
-      }
-    ],
-    "web_accessible_resources": [
-      {
-        "resources": ["simpsons_todas_temporadas.json"],
-        "matches": ["<all_urls>"]
-      }
-    ]
-  }
-  
+  "manifest_version": 3,
+  "name": "RosquillaTV",
+  "version": "1.0",
+  "description": "Mirá un episodio al azar de una serie clásica directamente desde Disney Plus. RosquillaTV elige un capítulo al azar por vos.",
+  "permissions": ["tabs"],
+  "host_permissions": ["https://www.disneyplus.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.disneyplus.com/*"],
+      "js": ["banner.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
