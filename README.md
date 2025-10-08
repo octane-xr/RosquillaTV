@@ -1,5 +1,4 @@
-# Random Simpsons Player
-
+# RRosquillaTV
 > Extensión para Chrome y Firefox que reproduce un episodio **aleatorio de *Los Simpson*** directamente desde [Disney+](https://www.disneyplus.com).  
 
 ---
@@ -19,7 +18,7 @@
 ### 🔹 Chrome
 1. Cloná este repo y cambiá a la rama principal:
    ```bash
-   git clone -b chrome https://github.com/tuusuario/random-simpsons-player.git
+   git clone -b chrome https://github.com/octane-xr/RosquillaTV.git
    ```
 2. Abrí `chrome://extensions`
 3. Activá **Modo desarrollador**
@@ -42,13 +41,13 @@
 ## Estructura del proyecto
 
 ```
-simpsons-random/
+RosquillaTv/
 │
 ├── manifest.json                # Manifest MV3 (Chrome) o MV2 (Firefox)
 ├── background.js                # Manejador de peticiones y datos
 ├── banner.js                    # Inyecta el banner dentro de Disney+
 ├── popup.html / popup.js        # Interfaz del selector aleatorio
-├── simpsons_todas_temporadas.json # Datos de todos los episodios
+├── all_seasons.json             # Datos de todos los episodios
 ├── icons/                       # Iconos de la extensión
 └── README.md
 ```
