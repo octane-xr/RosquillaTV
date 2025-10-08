@@ -1,4 +1,4 @@
-# RRosquillaTV
+# RosquillaTV
 > Extensión para Chrome y Firefox que reproduce un episodio **aleatorio de *Los Simpson*** directamente desde [Disney+](https://www.disneyplus.com).  
 
 ---
